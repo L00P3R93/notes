@@ -59,10 +59,8 @@ Process of determining how processing time increases as the size of the problem(
   3. Average Case
     - Provides a prediction about the running time of the algorithm.
     - Run algorithm many times, using many different inputs that come from some distribution that generates these inputs, compute the total running time and divide by number of trials.
-    - Assumes that the input is random.
-
-
-    ```console
+    - Assumes that the input is random
+    
     Lower Bound <= Average Time <= Upper Bound
     ```
 
