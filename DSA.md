@@ -95,7 +95,7 @@ Process of determining how processing time increases as the size of the problem(
       m = m + 2; //constant time, c
     }
     ```
-    
+
     - Total time = ```c * n = cn = O(n)```
   2. Nested Loops
     - Analyzed from inside out. Total running time is the product of the sizes of all the loops.
@@ -108,9 +108,9 @@ Process of determining how processing time increases as the size of the problem(
         k = k + 1; //constant time
       }
     }
-    ```
 
-    - Total time = ```c * n * n = cn<sup>2</sup> = O(n<sup>2</sup>)```
+    Total time = c * n * n = cn<sup>2</sup> = O(n<sup>2</sup>)
+    ```
   3. Consecutive Statements
     - Add the time complexities of each statement.
 
@@ -126,6 +126,6 @@ Process of determining how processing time increases as the size of the problem(
         k = k + 1; //constant time
       }
     }
-    ```
 
-    - Total time = ```
+    Total time = 
+    ```
