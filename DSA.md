@@ -62,7 +62,6 @@ Process of determining how processing time increases as the size of the problem(
     - Assumes that the input is random
     
     Lower Bound <= Average Time <= Upper Bound
-    ```
 
   Representing the best, worst and average cases in the form of expressions:
 
