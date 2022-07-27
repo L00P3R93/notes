@@ -61,7 +61,7 @@ Process of determining how processing time increases as the size of the problem(
     - Run algorithm many times, using many different inputs that come from some distribution that generates these inputs, compute the total running time and divide by number of trials.
     - Assumes that the input is random
 
-    Lower Bound <= Average Time <= Upper Bound
+    - ```Lower Bound <= Average Time <= Upper Bound```
 
   Representing the best, worst and average cases in the form of expressions:
 
@@ -77,9 +77,33 @@ Process of determining how processing time increases as the size of the problem(
   - g(n) is an asymptotic tight upper bound for f(n). Our objective is to give the smallest rate of growth g(n) which is greater than or equal to the given algorithms’ rate of growth /(n).
 
   #### Big-O Visualization
-  ```O[g(n)]``` is the set of functions with smaller or the same order of growth as ```g(n)```.
+  - ```O[g(n)]``` is the set of functions with smaller or the same order of growth as ```g(n)```.
 
   #### Omega-Q Notation [Lower Bounding Function]
   - This notation gives the tighter lower bound of the given algorithm, represented as ```f(n) = Ω(g(n))```.
   - The Ω notation can be defined as ```Ω(g(n)) = {f(n): there exist positive constants c and $n~0$ such that 0 ≤ cg(n) ≤ f(n) for all $n ≥ n~0$}```.
   - g(n) is an asymptotic tight lower bound for f(n). Our objective is to give the largest rate of growth g(n) which is less than or equal to the given algorithm’s rate of growth f(n).
+  #### Asymptotic Analysis
+  - Algorithm analysis where the asymptotic curve of *g(n)* is used in approximating *f(n)* at higher values of *n*. In other terms, g(n) is the asymptotic curve for f(n).
+  #### Guidelines for Asymptotic Analysis
+  1. Loops:
+    - Running time of a loop is, at most, the running time of statements inside the loop *(c)* multiplied by the number of iterations.
+    ```console
+    //Executes n times
+    for(i=1; i<=2; i++){
+      m = m + 2; //constant time, c
+    }
+    ```
+    - Total time = ```c * n = cn = O(n)```
+  2. Nested Loops
+    - Analyzed from inside out. Total running time is the product of the sizes of all the loops.
+    ```console
+    //Outer loop executed n times
+    for(i=1; i<=n; i++){
+      //inner loop executes n times
+      for(j=1; j<=n; j++){
+        k = k + 1; //constant time
+      }
+    }
+    ```
+    - Total time = ```c x n x n = cn<sup>2</sup> = O(n<sup>2</sup>)```
