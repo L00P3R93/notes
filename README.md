@@ -62,7 +62,7 @@ User:4+2+1=7; Group:4+2+1=7; Everyone:4
 ## Installing .tar.gz files in /opt
 ### Extract into opt
 ```console
-> tar -xzvf /path-to-tar.gz-file -C /opt
+> sudo tar -xzvf /path-to-tar.gz-file -C /opt
 ```
 ### Create Symbolic link -- Enables launch from Terminal
 ```console
@@ -76,6 +76,14 @@ User:4+2+1=7; Group:4+2+1=7; Everyone:4
 ```console
 > sudo subl /home/s_ntaks/.local/share/applications/program.desktop
 ```
+
+## Updating
+### Extract and Overwrite  
+```console
+> sudo tar -xzvf /path-to-tar.gz-file -C /opt  
+```
+then run file to update. 
+
 ### Removing
 ```console
 > rm -r ~/.config/discord
@@ -146,3 +154,21 @@ The operation respond with an ```OK```
 ```console
 > mongosh
 ```
+
+## Refresh xfce Session
+```console
+> xfce4-panel -r && xfwm4 --replace
+```
+
+## Reset xfce Session
+```console
+> xfce4-settings-editor
+> xfce4-panel -r
+```
+
+- Resetting using the ```xfconf-query tool```
+```console
+> xfconf-query -c xfce4-panel -p / -R -r
+> xfce4-panel -r
+```
+- For more on this visit [How to Refresh Your Linux Desktop Without Rebooting](https://www.makeuseof.com/tag/refresh-linux-desktop-without-rebooting/)
