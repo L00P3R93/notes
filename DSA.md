@@ -67,7 +67,7 @@ Process of determining how processing time increases as the size of the problem(
 
   ```math
   f(n) = n^2 + 500, for worst case
-
+  /sqrt{3}
   f(n) = n + 100n + 500, for best case
   ```
   #### Big-O Notation [Upper Bounding Function]
@@ -75,3 +75,11 @@ Process of determining how processing time increases as the size of the problem(
   - Generally, represented as ```f(n) = O[g(n)]```. This means that, at larger values of n, the upper bound of *f(n)* is *g(n)*.
   - O–notation defined as ```O[g(n)] = {f(n): there exist positive constants c and n~0 such that 0 ≤ f(n) ≤ cg(n) for all n > n~0}```.
   - g(n) is an asymptotic tight upper bound for f(n). Our objective is to give the smallest rate of growth g(n) which is greater than or equal to the given algorithms’ rate of growth /(n).
+ 
+  #### Big-O Visualization
+  ```O[g(n)]``` is the set of functions with smaller or the same order of growth as ```g(n)```.
+
+  #### Omega-Q Notation [Lower Bounding Function]
+  - This notation gives the tighter lower bound of the given algorithm, represented as ```f(n) = Ω(g(n))```.
+  - The Ω notation can be defined as ```Ω(g(n)) = {f(n): there exist positive constants c and $n~0$ such that 0 ≤ cg(n) ≤ f(n) for all $n ≥ n~0$}```.
+  - g(n) is an asymptotic tight lower bound for f(n). Our objective is to give the largest rate of growth g(n) which is less than or equal to the given algorithm’s rate of growth f(n).
