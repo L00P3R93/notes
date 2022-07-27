@@ -40,6 +40,7 @@ Process of determining how processing time increases as the size of the problem(
 #### Rate of Growth
  - The rate at which the running time increases as a function of input.
  - Commonly used Rates of Growth:
+ 
  | Time Complexity | Name | Example |
  | ----------- | ----------- | ----------- |
  | 1 | Constant | Adding an element to the front of a linked list |
