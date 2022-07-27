@@ -88,15 +88,18 @@ Process of determining how processing time increases as the size of the problem(
   #### Guidelines for Asymptotic Analysis
   1. Loops:
     - Running time of a loop is, at most, the running time of statements inside the loop *(c)* multiplied by the number of iterations.
+
     ```console
     //Executes n times
     for(i=1; i<=2; i++){
       m = m + 2; //constant time, c
     }
     ```
+    
     - Total time = ```c * n = cn = O(n)```
   2. Nested Loops
     - Analyzed from inside out. Total running time is the product of the sizes of all the loops.
+
     ```console
     //Outer loop executed n times
     for(i=1; i<=n; i++){
@@ -106,4 +109,23 @@ Process of determining how processing time increases as the size of the problem(
       }
     }
     ```
-    - Total time = ```c x n x n = cn<sup>2</sup> = O(n<sup>2</sup>)```
+
+    - Total time = ```c * n * n = cn<sup>2</sup> = O(n<sup>2</sup>)```
+  3. Consecutive Statements
+    - Add the time complexities of each statement.
+
+    ```console
+    x = x + 1; //constant time
+    //executes n times
+    for(i=1; i<=n; i++)
+      m = m + 2; //constant time
+    //outer loop executes n times
+    for(i=1; i<=n; i++){
+      //inner loop executed n times
+      for(j=1; j<=n; j++){
+        k = k + 1; //constant time
+      }
+    }
+    ```
+
+    - Total time = ```
