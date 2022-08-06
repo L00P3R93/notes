@@ -82,7 +82,7 @@ User:4+2+1=7; Group:4+2+1=7; Everyone:4
 ```console
 > sudo tar -xzvf /path-to-tar.gz-file -C /opt  
 ```
-then run file to update. 
+then run file to update.
 
 ### Removing
 ```console
@@ -172,3 +172,18 @@ The operation respond with an ```OK```
 > xfce4-panel -r
 ```
 - For more on this visit [How to Refresh Your Linux Desktop Without Rebooting](https://www.makeuseof.com/tag/refresh-linux-desktop-without-rebooting/)
+
+
+## Download HTTP directory with all files and sub-directories as they appear on the online files/folders list
+
+```console
+> wget -r -np -nH --cut-dirs=3 -R index.html 'http://hostname/aaa/bbb/ccc/ddd/''
+```
+
+#### Explanation:
+    It will download all files and subfolders in ddd directory
+    - -r : recursively
+    - -np : not going to upper directories, like ccc/…
+    - -nH : not saving files to hostname folder
+    - --cut-dirs=3 : but saving it to ddd by omitting first 3 folders aaa, bbb, ccc
+    - -R index.html : excluding index.html files

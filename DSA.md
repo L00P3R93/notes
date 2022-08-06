@@ -109,7 +109,7 @@ Process of determining how processing time increases as the size of the problem(
       }
     }
 
-    Total time = c * n * n = cn<sup>2</sup> = O(n<sup>2</sup>)
+    Total time = c * n * n = cn^2 = O(n^2)
     ```
   3. Consecutive Statements
     - Add the time complexities of each statement.
@@ -127,5 +127,32 @@ Process of determining how processing time increases as the size of the problem(
       }
     }
 
-    Total time = 
+    Total time = c0 + c1n + c2n^2 = O(n^2)
+    ```
+  4. If-then-else statements
+    - Worst-case running time: the test, plus either the then part or the else part.
+
+    ```console
+    //test: constant
+    if(length() == 0){
+      return false; //then part: constant
+    }else{ //else part: (constant + constant) * n
+      for(int n=0; n < length; n++)
+        //another if: constant + constant (no else part)
+        if(!list[n].equals(otherList[n]))
+          return false; // constant
+    }
+
+    Total time = c0 + c1 + (c2 + c3) * n = O(n)
+    ```
+
+  5. Logarithmic Complexity
+    - An Algorithm is *O(logn) if it takes a constant time to cut the problem size by a fraction.
+
+    ```console
+    for(i=1;i<=n;)
+      i = i * 2;
+
+    for(i=n; i>=1;)
+      i = i/2;
     ```
