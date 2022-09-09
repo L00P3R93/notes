@@ -1,6 +1,11 @@
 ### Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">
 These are my notes giving various tutorials when using debian linux i.e kali. Most of the instructions can be found online in the official websites or with a little bit of googling.
 
+## Check Kali Linux Version
+```console
+> lsb_release -a
+```
+
 ## Linux Permissions
 [User:r/w/x] [group:r/w/x] [everyone:r/w/x]  
 ■ ■ Read ( r ): 4  
